@@ -41,3 +41,6 @@ Local Files
 keys.py
 
 *.swp
+*.pyc
+
+.*
