@@ -1,0 +1,7 @@
+import tweepy
+
+global consumer_key="XTgKOQzkdSgrUmlhMGPlA"
+global consumer_secret="KXKvSDUnEkoIaeGzV2M9Fa2d3a7ZW2P57m6zojf1Y"
+
+global access_token="1636390368-lXdBiqrrqMTIiO5qVsfI9aBtCTxQ8qYVEyOkzvM"
+global access_token_secret="Qq0zYLX0u91zTasBXx40lYmtNDjfzzSncfyJVpybg8"
