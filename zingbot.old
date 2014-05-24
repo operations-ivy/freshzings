@@ -1,0 +1,7 @@
+#for follower in tweepy.Cursor(api.followers).items():
+#    follower.follow()
+
+c = tweepy.Cursor(api.search, q='zing')
+for tweet in c.items():
+        api.update_status(tweet)
+        time.sleep(60)#Tweet every minute
