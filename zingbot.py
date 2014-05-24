@@ -8,6 +8,8 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
 
+tweets = list()
+
 #filename=open(argfile,'r')
 #f=filename.readlines()
 #filename.close()
@@ -18,14 +20,8 @@ api = tweepy.API(auth)
 
 #for follower in tweepy.Cursor(api.followers).items():
 #    follower.follow()
+tweets = api.search(q="zing")
+for result in tweets:
+        api.update_status(result)
 
-
-new = api.create_saved_search('http://search.twitter.com/search.json?q=%23zing')
-
-search = [api.saved_searches(new)]
-s=search.readlines()
-search.close()
-
-for line in s:
-        api.update_status(line)
-        time.sleep(60)
+        print tweets
